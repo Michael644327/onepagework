@@ -1,10 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import './one-page.css'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './pages/Home';
+import Blog from './pages/blog';
+import BlogContent from './pages/blog-content';
 
 function App() {
-  return (
+  return (  
+    <>  
+    <Router>
+          <nav style={{ padding: '1rem', background: '#eee' }}>
+        <Link to="/" style={{ marginRight: '1rem' }}>首頁</Link>
+        <Link to="/blog" style={{ marginRight: '1rem' }}>部落格</Link>
+      </nav>
     <div className="App">
-      <header className="App-header">
+    {/*   <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -16,9 +27,17 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
-      </header>
-    </div>
+        </a>00
+      </header>*/}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/page1" element={<BlogContent />} />
+      </Routes>
+    </div> 
+    </Router>
+    <footer>© 2025 Alyse Wang. All rights reserved.</footer>
+    </>
   );
 }
 

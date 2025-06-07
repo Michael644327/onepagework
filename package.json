@@ -2,7 +2,7 @@
   "name": "onepagework",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Michael644327.github.io/onepagework",
+  "homepage": "https://Michael644327.github.io/onepagework/",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
