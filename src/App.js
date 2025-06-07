@@ -11,8 +11,8 @@ function App() {
     <>  
     <Router>
           <nav style={{ padding: '1rem', background: '#eee' }}>
-        <Link to="/" style={{ marginRight: '1rem' }}>首頁</Link>
-        <Link to="/blog" style={{ marginRight: '1rem' }}>部落格</Link>
+        <Link to="/onepagework" style={{ marginRight: '1rem' }}>首頁</Link>
+        <Link to="/onepagework/blog" style={{ marginRight: '1rem' }}>部落格</Link>
       </nav>
     <div className="App">
     {/*   <header className="App-header">
@@ -30,9 +30,9 @@ function App() {
         </a>00
       </header>*/}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/page1" element={<BlogContent />} />
+        <Route path="/onepagework" element={<Home />} />
+        <Route path="/onepagework/blog" element={<Blog />} />
+        <Route path="/onepagework/blog/page1" element={<BlogContent />} />
       </Routes>
     </div> 
     </Router>
