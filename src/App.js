@@ -1,7 +1,7 @@
 // import './App.css';
 import './css/one-page.css'
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Blog from './pages/blog';
 import BlogContent from './pages/blog-content';
@@ -11,14 +11,14 @@ function App() {
     <>  
     <Router>
           <nav style={{ padding: '1rem', background: '#eee' }}>
-        <Link to="/onepagework" style={{ marginRight: '1rem' }}>首頁</Link>
-        <Link to="/onepagework/blog" style={{ marginRight: '1rem' }}>部落格</Link>
+        <Link to="/" style={{ marginRight: '1rem' }}>首頁</Link>
+        <Link to="/blog" style={{ marginRight: '1rem' }}>部落格</Link>
       </nav>
     <div className="App">
       <Routes>
-        <Route path="/onepagework" element={<Home />} />
-        <Route path="/onepagework/blog" element={<Blog />} />
-        <Route path="/onepagework/blog/page1" element={<BlogContent />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/page1" element={<BlogContent />} />
       </Routes>
     </div> 
     </Router>
