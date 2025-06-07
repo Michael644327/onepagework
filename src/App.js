@@ -1,5 +1,5 @@
 // import './App.css';
-import './one-page.css'
+import './css/one-page.css'
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
@@ -15,20 +15,6 @@ function App() {
         <Link to="/onepagework/blog" style={{ marginRight: '1rem' }}>部落格</Link>
       </nav>
     <div className="App">
-    {/*   <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>00
-      </header>*/}
       <Routes>
         <Route path="/onepagework" element={<Home />} />
         <Route path="/onepagework/blog" element={<Blog />} />

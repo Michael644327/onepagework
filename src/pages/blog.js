@@ -6,10 +6,10 @@ export default function Blog() {
         <>
             <div className="wide-section">
                 <div className="top-title">
-                    <div className="title-block img-block">
+                    <div className="title-block title-img">
                         <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/desktop/index/Hero%20Section.png" alt="img" width="100%" />
                     </div>
-                    <div className="title-block text-block">
+                    <div className="title-block title-text">
                         <h3>BLOG</h3>
                         <div>前端工程師 & 職涯諮詢師</div>
                     </div>
