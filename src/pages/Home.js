@@ -193,7 +193,6 @@ export default function Home() {
             <h3>與我聯繫</h3>
             <div className="contact">
                 <div>alysewang@hexschool.com 合作洽談</div>
-
                 <div>&rarr;</div></div>
             <div className="contact">
                 <div className="flex-row">

@@ -439,9 +439,10 @@ h3.article-title {
 }
 
 @media (max-width: 768px) {
-.respons{
-    flex-direction: column;
-}
+    .respons {
+        flex-direction: column;
+    }
+
     .respon {
         width: 100%;
         padding: 24px;
@@ -492,19 +493,20 @@ h3.article-title {
 
 
 @media (max-width: 768px) {
-    
-.news {
-    gap: 24px;
-    flex-direction: column;
-}
-.news-img {
-    width: 100%;
-}
 
-.news-block {
-    width: 100%;
-    padding:24px;
-}
+    .news {
+        gap: 24px;
+        flex-direction: column;
+    }
+
+    .news-img {
+        width: 100%;
+    }
+
+    .news-block {
+        width: 100%;
+        padding: 24px;
+    }
 }
 
 .contact-section {
@@ -529,6 +531,10 @@ h3.article-title {
     justify-content: center;
 }
 
+.top-article h3 {
+    font-size: 36px;
+}
+
 .lesson-photo {
     width: 100%;
 }
@@ -538,7 +544,9 @@ h3.article-title {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 24px;
+    column-gap: 24px;
+    row-gap: 40px;
+    padding-top: 40px;
 }
 
 .article {
@@ -609,11 +617,51 @@ button.readmore a {
     text-decoration: none;
 }
 
-.searchbox {
-    padding: 6px;
-    border-radius: 20px;
+.searchbar {
+    padding: 40px 0 20px 0;
+    position: relative;
+    width: 460px;
 }
 
+.search-icon {
+    position: absolute;
+    left: 16px;
+    top: 60px;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.searchbox {
+    padding: 6px 0 6px 36px;
+    border-radius: 20px;
+    width: 400px;
+}
+
+@media (max-width: 768px) {
+    .searchbar {
+        width: 100%;
+        padding: 40px 16px 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .search-icon {
+        left: 100px;
+    }
+
+    .page-footer {
+        display: none;
+    }
+}
+
+.page-footer {
+    font-size: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid #3f3f3f;
+    padding: 40px;
+}
 
 /* blog-content */
 
@@ -624,9 +672,22 @@ button.readmore a {
 .blog-container {
     max-width: 636px;
     margin: 0 auto;
+    padding:80px 0;
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+}
+.blog-container h3{
+    font-size: 28px;
 }
 
-
+@media (max-width: 768px) {
+.blog-container {
+    width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+}
 ul.pagination {
     list-style-type: none;
 }
@@ -712,7 +773,7 @@ ul.pagination {
 .page-button {
     background-color: #FFF;
     border: 1px solid #000;
-    border-radius: 15px;
+    border-radius: 25px;
     font-size: 14px;
     width: 120px;
     padding: 12px;
