@@ -1,6 +1,61 @@
 * {
     /* box-sizing: content-box; */
     box-sizing: border-box;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+h3 {
+    margin: 0 0 24px 0;
+    font-size: 64px;
+    line-height: 150%;
+}
+
+h4 {
+    margin: 0;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+nav {
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    ;
+}
+
+footer {
+    padding: 24px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.large-text {
+    font-size: 28px;
 }
 
 .wide-section {
@@ -15,6 +70,23 @@
     flex-direction: column;
 }
 
+@media (max-width:1296px) {
+    .container {
+        width: 100%;
+    }
+
+    .blog-carousel {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
 .top-title {
     display: flex;
 }
@@ -26,20 +98,38 @@
     justify-content: center;
 }
 
+.top-title .title-text h3 {
+    font-size: 120px;
+}
+
+@media (max-width: 768px) {
+    .top-title{
+        flex-direction: column;
+        text-align: center;
+    }
+    .title-block {
+        width: 100%;
+    }
+    .top-title .title-text h3 {
+        font-size: 52px;
+    }
+
+}
+
 .top-title .title-text {
     color: #0027D5;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true);
+    font-size: 28px;
+    font-weight: 700;
+    padding:24px 0;
 }
 
-.top-title .title-text h3 {
-    font-size: 120px;
-}
 
 .container {
-    max-width: 1920px;
+    max-width: 1296px;
 }
 
 .blue {
@@ -52,49 +142,53 @@
 .intro {
     background-color: #FFF;
     padding: 80px 40px;
-    border: 1px solid #000;
-    width: 55%;
-    margin: -201px 80px 0 auto;
+    /* border: 1px solid #000; */
     position: relative;
     z-index: 100;
+    font-size: 28px;
+    line-height: 150%;
+    margin: 0 12px;
 }
 
+@media (min-width : 1024px) {
+    .intro {
+        width: 55%;
+        margin: -201px 80px 0 auto;
 
-
-
-.news {
-    gap: 24px;
-    display: flex;
-}
-
-.news-img {
-    width: 50%;
-}
-
-.news-block {
-    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true);
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.news.sub {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+    }
 }
 
 
 .service {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    padding:64px 0;
 }
 
-.service .sections {
+.service .section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+
+@media (min-width : 1024px) {
+    .service .section {
+        flex-direction: row;
+        padding: 0 110px;
+    }
+
+
+    .service .text-left {
+        flex-direction: row-reverse;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .text-block h4{
+        padding-top: 20px;
+    }
+
 }
 
 .service .img {
@@ -102,16 +196,119 @@
 }
 
 .service .des {
-    position: relative;
-    z-index: 100;
+    background-color: #fff;
 }
 
+.arrow-circle{
+    display: inline-block;
+    text-align: center;
+    border: 2px solid #000;
+    border-radius: 50%;
+    width: 44px;
+}
+
+@media (min-width : 1024px) {
+    .service .des {
+        position: relative;
+        width: 600px;
+        top: 50px;
+        z-index: 100;
+    }
+
+    .service .text-right .des {
+        margin-left: -50px;
+    }
+
+    .service .text-left .des {
+        margin-right: -50px;
+    }
+}
+
+.service .large-text {
+    text-align: right;
+}
+
+.blog {
+    display: flex;
+}
+
+.home-blogs {
+    padding: 80px 0;
+    border: 1px solid #000;
+    position: relative;
+}
+
+h3.article-title {
+    font-size: 28px;
+    margin-bottom: 0;
+}
+
+.blog-carousel {
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #B2BEF2;
+    color: #FFF;
+    font-size: 24px;
+    border: 2px solid #B2BEF2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.arrow:hover {
+    background-color: blue;
+    color: white;
+}
+
+.arrow.left {
+    left: 80px;
+}
+
+.arrow.right {
+    right: 80px;
+}
+
+@media (max-width: 768px) {
+    .arrow {
+        top: auto;
+        bottom: -50px;
+        transform: none;
+        position: absolute;
+    }
+
+    .arrow.left {
+        /* left: calc(50% - 50px); */
+        left:auto;
+        right: 80px;
+    }
+
+    .arrow.right {
+        /* left: calc(50% + 10px); */
+        right: 20px;
+    }
+
+    .article-2,
+    .article-3 {
+        display: none;
+    }
+}
 
 .text-block {
     position: relative;
-    /* 必須有 position: relative 才能讓 ::before 絕對定位對齊 */
     padding: 24px;
-    /* 給橫線留空間，也可用 margin */
     width: 480px;
     height: 210px;
     border: 1px solid #000;
@@ -132,14 +329,151 @@
     background-color: #0033cc;
 }
 
+.asking-section {
+    padding: 80px 0;
+}
 
-.contact {
+.asking {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.img-block.bg-gray {
+    width: 745px;
+    padding: 24px;
+}
+
+.asking-text {
     display: flex;
     flex-direction: column;
 }
 
+.para-1,
+.para-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+    .asking-text .text-block {
+        position: relative;
+        width: 600px;
+        top: 50px;
+        z-index: 100;
+    }
+
+    .para-1 {
+        margin-left: -150px;
+    }
+
+    .para-2 {
+        margin-top: -50px;
+    }
+}
+
+@media (max-width: 768px) {
+.asking{
+flex-direction: column;
+}
+    .asking-section, .img-block{
+        width:100%;
+    }
+}
+
+.bg-white {
+    background-color: #FFF;
+}
+
+.bg-gray {
+    background-color: #F5F5F5;
+}
+
+.respons {
+    display: flex;
+    padding: 24px;
+    gap: 10px;
+}
+
+.respon {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.bd-bt {
+    border-bottom: 1px solid #000;
+}
+
+.respon h4 {
+    font-size: 24px;
+}
+
+
+
+.news {
+    gap: 24px;
+    display: flex;
+}
+
+.news-img {
+    width: 50%;
+}
+
+.news-block {
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px;
+}
+
+.news-sub {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px;
+    gap: 24px;
+}
+
+.news-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.news-input input {
+    background-color: #f1f1f1;
+    padding: 16px 8px;
+    font-size: 20px;
+    border: none;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    padding: 80px 0;
+
+}
+
+.contact-section .contact {
+    border-bottom: 3px solid #000;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 
 /* blog */
+.home-blogs .blogs {
+    justify-content: center;
+}
 
 .blogs {
     display: flex;
@@ -149,13 +483,22 @@
     gap: 24px;
 }
 
-.blog {
+.article {
     max-width: 416px;
     width: 33%;
     gap: 16px;
 }
 
-.article {
+
+@media (max-width:967px) {
+    .article {
+        max-width: 600px;
+        width: 100%;
+    }
+
+}
+
+.article-title {
     margin: 0 0 16px 0;
 }
 
@@ -194,17 +537,19 @@
     text-overflow: ellipsis;
 }
 
-button.readmore {
-    background-color: #FFF;
+.readmore {
+    display: inline-block;
+    text-decoration: none;
     padding: 8px 16px;
+    color: #000;
+    background-color: #FFF;
+    border: 1px solid #000;
     border-radius: 40px;
 }
 
-.readmore a {
-    color: #000;
+button.readmore a {
     text-decoration: none;
 }
-
 
 .searchbox {
     padding: 6px;

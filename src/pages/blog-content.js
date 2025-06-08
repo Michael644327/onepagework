@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 export default function BlogContent() {
     return <>
@@ -106,7 +108,7 @@ export default function BlogContent() {
 
 
             <h3 className="blue">結語</h3>
-            <p>自學前端可能遇到卡關、挫折，但同時也具備很高的自主性。只要把 基礎、框架、實踐 三大面向做好，就能在前端這條路上穩步前進。若你在學習過程中需要更多建議或想要職涯諮詢，歡迎透過<a href="/blog">聯絡方式</a>與我聯繫！</p>
+            <p>自學前端可能遇到卡關、挫折，但同時也具備很高的自主性。只要把 基礎、框架、實踐 三大面向做好，就能在前端這條路上穩步前進。若你在學習過程中需要更多建議或想要職涯諮詢，歡迎透過<Link to="/blog">聯絡方式</Link>與我聯繫！</p>
 
             <div className="nodeblock">「程式替你開路，諮詢替你指路，一起走向更寬廣的未來。」</div>
 
