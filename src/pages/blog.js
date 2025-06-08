@@ -49,7 +49,7 @@ export default function Blog() {
                     ))}
                 </div>
                 <ul className="pagination">
-                    <li className="arrow">
+                    <li className="bg-arrow">
                         <Link href="#">&lt;</Link>
                     </li>
                     <li className="page active">
@@ -70,7 +70,7 @@ export default function Blog() {
                     <li className="dots">
                         <Link to="#">...</Link>
                     </li>
-                    <li className="arrow">
+                    <li className="bg-arrow">
                         <Link to="#">&gt;</Link>
                     </li>
                 </ul>

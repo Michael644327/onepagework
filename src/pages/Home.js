@@ -31,7 +31,7 @@ export default function Home() {
             <div className="services">
                 <div className="section text-right">
                     <div className="img">
-                        <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/desktop/index/photo.png" alt="photo1" />
+                        <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/desktop/index/photo.png" alt="photo1" width="100%" />
                     </div>
                     <div className="des text-block">
                         <h4>履歷健檢</h4>
@@ -40,7 +40,7 @@ export default function Home() {
                 </div>
                 <div className="section text-left">
                     <div className="img">
-                        <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/desktop/index/photo2.png" alt="photo2" />
+                        <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/desktop/index/photo2.png" alt="photo2" width="100%" />
                     </div>
                     <div className="des text-block">
                         <h4>線上諮詢</h4>
@@ -48,7 +48,7 @@ export default function Home() {
                 </div>
                 <div className="section text-right">
                     <div className="img">
-                        <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/desktop/index/photo3.png" alt="photo3" />
+                        <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/desktop/index/photo3.png" alt="photo3" width="100%" />
                     </div>
                     <div className="des text-block">
                         <h4>網頁開發</h4>
@@ -56,7 +56,7 @@ export default function Home() {
                 </div>
                 <div className="section text-left">
                     <div className="img">
-                        <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/desktop/index/photo4.png" alt="photo4" />
+                        <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/desktop/index/photo4.png" alt="photo4" width="100%" />
                     </div>
                     <div className="des text-block">
                         <h4>企業內訓</h4>
@@ -76,7 +76,7 @@ export default function Home() {
                     <div className="blogs">
                         {homeBlog.map((v, i) => (
                             <div className={`article article-${v.id}`} key={v.id}>
-                                <img src={v.image} alt="lesson-photo" />
+                                <img src={v.image} alt="lesson-photo" width="100%" />
                                 <div className="article-info">
                                     <div className="date">{v.data}</div>
                                     <div className="tags">{v.tag} {v.pop ? <span className="pop">{v.pop}</span> : ""}</div>
@@ -101,11 +101,14 @@ export default function Home() {
                     </div>
                     <div className="asking-text">
                         <div className="para-1 text-block bg-white">
-                            在職涯發展的關鍵轉折點上，適時的協助與正確的方向至關重要。藉由職涯諮詢，我可以幫助你加速釐清目標、建立更全面的技術與軟實力，並有效<span className="blue">突破原有的舒適圈</span>。
+                            <div>
+                                在職涯發展的關鍵轉折點上，適時的協助與正確的方向至關重要。藉由職涯諮詢，我可以幫助你加速釐清目標、建立更全面的技術與軟實力，並有效<span className="blue">突破原有的舒適圈</span>。
+                            </div>
                         </div>
                         <div className="para-2 text-block bg-gray">
                             <p>期待在下一個新機會中，我能與你一起攜手邁向更高峰！</p>
-                            <button className="readmore"><Link to="./blog/page1">立即預約諮詢</Link></button>
+                            <div>
+                                <button className="readmore"><Link to="./blog/page1">立即預約諮詢</Link></button></div>
                         </div>
                     </div>
 
@@ -168,7 +171,7 @@ export default function Home() {
         </div>
         <div className="news">
             <div className="news-img">
-                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/desktop/index/photo9.png" alt="img" height="100%" />
+                <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/desktop/index/photo9.png" alt="img" width="100%" />
             </div>
             <div className="news-block">
                 <div className="news-sub bg-white">
